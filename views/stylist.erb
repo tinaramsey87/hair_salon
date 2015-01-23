@@ -1,6 +1,6 @@
-<div class="container">
-<h1>Clients for stylist <%= @stylist.name() %></h1>
+<h2>Clients for stylist <%= @stylist.name() %></h2>
 
+<div class="list">
 <% if @stylist.clients.any?() %>
   <% @stylist.clients.each() do |client| %>
   <ul>
@@ -11,18 +11,18 @@
   <% else %>
   <p>Add some clients for <%= @stylist.name() %>!</p>
   <% end %>
+</div>
 
 <h3>Add new clients:</h3>
-  <form action="/clients" method="post">
+  <form action="/clients" method="post" class="form-group">
     <input id="stylist_id" name="stylist_id" type="hidden" value="<%= @stylist.id() %>">
 
     <label for="name">Client's name:</label>
     <input id="name" name="name" type="text">
 
-    <button type="submit">Add Client</button>
+    <button type="submit" class="btn">Add Client</button>
 
   </form>
 
 <p>Click <a href="/stylists/<%= @stylist.id() %>/edit">here</a> to edit this stylist's name or remove them.</p>
 <p><a href="/">Return to Main Page</a></p>
-</div>

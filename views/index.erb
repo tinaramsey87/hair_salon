@@ -1,8 +1,5 @@
-<h1>Hair Salon</h1>
-
-<div class="container">
 <h3>Stylists:</h3>
-
+<div class="list">
 <% if @stylists.any?() %>
   <% @stylists.each() do |stylist| %>
   <ul>
@@ -15,13 +12,13 @@
   <p>Salon owner please add stylists to the list!</p>
 
 <% end %>
+</div>
 
-<form action="/stylists" method="post">
+
+<form action="/stylists" method="post" class="form-group">
   <label for="name">Add new stylist:</label>
   <input id="name" name="name" type="text" autofocus>
 
-  <button type="submit">Add Stylist</button>
+  <button type="submit" class="btn">Add Stylist</button>
 
 </form>
-
-</div>

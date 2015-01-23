@@ -1,52 +1,94 @@
 body {
-  background-color: #006151;
+  background-color: #E9A2CC;
+  background-image: url("/img/upfeathers.png");
 
 }
 
 .container {
-  background-color: #18B197;
-  margin-top: 5%;
-  width: 400px;
-  height: 550px;
-  margin-left: 0 auto;
-  padding: 15px;
-  border: solid #007B66;
+  background-color: rgba(216, 114, 172, 0.6);
+  border: 3px double #8E1559;
   border-radius: 10px;
+  margin-top: 5%;
+  max-width: 500px;
+  height: 475px;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
+  padding: 15px;
 
 }
 
 .list {
   overflow-y: scroll;
+  height: 190px;
   max-height: 190px;
+  font-weight: bold;
 
 }
 
 h1 {
-  color: #006151;
+  color: #D872AC;
   text-align: center;
+  text-height: 25px;
+  font-weight: bold;
+
+}
+
+h2 {
+  color: #D872AC;
+  text-align: center;
+  font-weight: bold;
 
 }
 
 h3 {
+  color: black;
   text-align: center;
+  font-weight: bold;
 
 }
 
 p {
+  color: black;
   text-align: center;
+  font-weight: bold;
+
 }
 
 ul {
-  list-style-image: square;
   margin-left: 100px;
 
 }
 
 .form-group {
   margin-left: 90px;
+  font-weight: bold;
+
 }
 
 .btn {
+  -moz-box-shadow:inset 0px 1px 0px 0px #dcecfb;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #dcecfb;
+  box-shadow:inset 0px 1px 0px 0px #dcecfb;
+  background-color:#D872AC;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #84bbf3;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #528ecc;
   margin-left: 90px;
+  width: 140px;
 
+}
+
+.btn:active {
+  position:relative;
+  top:1px;
 }
