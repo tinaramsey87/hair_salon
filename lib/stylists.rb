@@ -51,6 +51,11 @@ class Stylist
     @id = result.first.fetch("id").to_i()
   end
 
+  define_method(:delete) do
+    DB.exec("DELETE FROM stylists WHERE id = #{self.id()}")
+    DB.exec("DELETE FROM clients WHERE stylist_id = #{self.id()}")
+  end
+
   define_method(:==) do |another_stylist|
     self.name().==(another_stylist.name()).&(self.id().==(another_stylist.id()))
   end
