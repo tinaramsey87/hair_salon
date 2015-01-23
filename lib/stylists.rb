@@ -18,6 +18,28 @@ class Stylist
     stylists
   end
 
+  define_singleton_method(:find) do |id|
+    found_stylist = nil
+    Stylist.all().each() do |stylist|
+      if stylist.id().==(id)
+        found_stylist = stylist
+      end
+    end
+    found_stylist
+  end
+
+  define_method(:clients) do
+    list_clients = []
+    clients = DB.exec("SELECT * FROM clients WHERE stylist_id = #{self.id()};")
+    clients.each() do |client|
+      name = client.fetch("name")
+      id = client.fetch("id").to_i()
+      stylist_id = client.fetch("stylist_id").to_i()
+      list_clients.push(Client.new({:name => name, :id => id, :stylist_id => stylist_id}))
+    end
+    list_clients
+  end
+
   define_method(:save) do
     result = DB.exec("INSERT INTO stylists (name) VALUES ('#{@name}') RETURNING id;")
     @id = result.first.fetch("id").to_i()
