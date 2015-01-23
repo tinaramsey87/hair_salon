@@ -7,8 +7,8 @@ _____
 You will need Sinatra and PG gems installed.
 
 You will need to set up a Database called 'salon' with the following tables:
-clients
-stylists
+Table clients with columns id name and stylist_id
+Table stylists with columns id and name
 
 ##Author
 _____
