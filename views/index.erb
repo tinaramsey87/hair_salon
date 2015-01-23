@@ -1,11 +1,12 @@
 <h1>Hair Salon</h1>
 
+<div class="container">
 <h3>Stylists:</h3>
 
 <% if @stylists.any?() %>
   <% @stylists.each() do |stylist| %>
   <ul>
-    <li><a href="/stylist/<%= stylist.id() %>"><%= stylist.name() %></a></li>
+    <li><a href="/stylists/<%= stylist.id() %>"><%= stylist.name() %></a></li>
 
   </ul>
   <% end %>
@@ -22,3 +23,5 @@
   <button type="submit">Add Stylist</button>
 
 </form>
+
+</div>

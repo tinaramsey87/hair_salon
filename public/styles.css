@@ -1,0 +1,52 @@
+body {
+  background-color: #006151;
+
+}
+
+.container {
+  background-color: #18B197;
+  margin-top: 5%;
+  width: 400px;
+  height: 550px;
+  margin-left: 0 auto;
+  padding: 15px;
+  border: solid #007B66;
+  border-radius: 10px;
+
+}
+
+.list {
+  overflow-y: scroll;
+  max-height: 190px;
+
+}
+
+h1 {
+  color: #006151;
+  text-align: center;
+
+}
+
+h3 {
+  text-align: center;
+
+}
+
+p {
+  text-align: center;
+}
+
+ul {
+  list-style-image: square;
+  margin-left: 100px;
+
+}
+
+.form-group {
+  margin-left: 90px;
+}
+
+.btn {
+  margin-left: 90px;
+
+}

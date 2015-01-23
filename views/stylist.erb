@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Clients for stylist <%= @stylist.name() %></h1>
 
 <% if @stylist.clients.any?() %>
@@ -21,3 +22,7 @@
     <button type="submit">Add Client</button>
 
   </form>
+
+<p>Click <a href="/stylists/<%= @stylist.id() %>/edit">here</a> to edit this stylist's name.</p>
+<p><a href="/">Return to Main Page</a></p>
+</div>

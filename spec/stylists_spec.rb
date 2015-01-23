@@ -60,4 +60,13 @@ describe(Stylist) do
       expect(test_stylist.clients()).to(eq([test_client, test_client2]))
     end
   end
+
+  describe('#update') do
+    it('lets you edit names of stylists') do
+      test_stylist = Stylist.new({:name => "Henry"})
+      test_stylist.save()
+      test_stylist.update({:name => "Henri"})
+      expect(test_stylist.name()).to(eq("Henri"))
+    end
+  end
 end

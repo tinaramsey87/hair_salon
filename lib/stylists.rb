@@ -40,6 +40,12 @@ class Stylist
     list_clients
   end
 
+  define_method(:update) do |attributes|
+    @name = attributes.fetch(:name)
+    @id = self.id()
+    DB.exec("UPDATE stylists SET name = '#{@name}' WHERE id = #{@id};")
+  end
+
   define_method(:save) do
     result = DB.exec("INSERT INTO stylists (name) VALUES ('#{@name}') RETURNING id;")
     @id = result.first.fetch("id").to_i()
